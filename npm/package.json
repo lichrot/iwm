@@ -10,6 +10,9 @@
   "module": "./mod.js",
   "types": "./mod.d.ts",
   "files": ["./*.js", "./*.d.ts", "./LICENSE", "./NOTICE", "./README.md"],
-  "repository": { "type": "git", "url": "git+ssh://git@github.com/lichrot/iwm.git" },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/lichrot/iwm.git"
+  },
   "dependencies": { "@qnd/iws": "^1.1.0" }
 }

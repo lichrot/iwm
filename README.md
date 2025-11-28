@@ -34,9 +34,6 @@ set.delete(listener);
 ## [🖥️] Tasks
 
 ```sh
-# Run tests
-deno task test
-
 # Run publishing in dry mode
 deno task dry-run
 

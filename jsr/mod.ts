@@ -37,8 +37,17 @@ export class IterableWeakMap<K extends WeakKey, V> {
    * Creates an iterable version of WeakMap.
    * @param iterable Iterable to construct this IterableWeakMap from
    */
-  constructor(iterable?: readonly (readonly [K, V])[] | Iterable<(readonly [K, V])> | null) {
-    if (iterable) { for (const entry of iterable) this.set(entry[0], entry[1]); }
+  constructor(
+    iterable?:
+      | readonly (readonly [K, V])[]
+      | Iterable<(readonly [K, V])>
+      | null,
+  ) {
+    if (iterable) {
+      for (const entry of iterable) {
+        this.set(entry[0], entry[1]);
+      }
+    }
   }
 
   /**
@@ -60,7 +69,7 @@ export class IterableWeakMap<K extends WeakKey, V> {
 
   /**
    * Returns an element with the given key or undefined if not present.
-   * @param key 
+   * @param key
    * @returns An element or undefined if not present
    */
   get(key: K): V | undefined {

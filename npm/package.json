@@ -1,6 +1,6 @@
 {
-  "name": "@qnd/iws",
-  "description": "Iterable WeakSet",
+  "name": "@qnd/iwm",
+  "description": "Iterable WeakMap",
   "version": "1.1.0",
   "license": "Apache-2.0",
   "author": "Jørgen Tau",

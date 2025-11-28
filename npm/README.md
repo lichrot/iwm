@@ -23,12 +23,14 @@ deno  install jsr:@qnd/iws
 ```ts
 import { IterableWeakSet } from "@qnd/iws";
 
-const set = new IterableWeakSet<(() => void)>();
+type Listener = (data: Record<string, any>) => void;
 
-const listener = () => console.log("event");
-set.add(listener);
-for (const item of set) item();
-set.delete(listener);
+const listeners = new IterableWeakMap<{ type: string }, Listener>();
+const key = { type: "type" };
+const logValue = (data) => console.log(data.value);
+listeners.set(key, logValue);
+for (const listener of listeners.values()) listener({ value: "abc" });
+listeners.delete(key);
 ```
 
 ## [🖥️] Tasks
